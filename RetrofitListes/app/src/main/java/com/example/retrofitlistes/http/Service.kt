@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 interface Service {
     @GET("exos/long/list")
-    fun doubleNumber(): Call<List<Long>>
+    fun AfficherListLong(): Call<List<Long>>
 
 
 //    @GET("exos/truc/list")
