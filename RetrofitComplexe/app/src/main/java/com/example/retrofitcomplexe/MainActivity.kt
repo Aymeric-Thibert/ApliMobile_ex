@@ -22,8 +22,11 @@ class MainActivity : AppCompatActivity() {
             if (name.isNotEmpty()) {
                 RetrofitUtil.get().getByName(name).enqueue(object : Callback<String> {
                     override fun onResponse(call: Call<String>, response: Response<String>) {
-                        if (response.isSuccessful) {
+                        if (response.isSuccessful){
+
                             binding.someTextView.text = response.body()
+
+
                         }
                     }
                     override fun onFailure(call: Call<String>, t: Throwable) {
