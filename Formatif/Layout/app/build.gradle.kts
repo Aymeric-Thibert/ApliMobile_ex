@@ -6,7 +6,9 @@ plugins {
 android {
     namespace = "com.example.layout"
     compileSdk = 35
-
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.layout"
         minSdk = 24
@@ -45,4 +47,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    
+        implementation("androidx.drawerlayout:drawerlayout:1.1.1")
+        implementation("com.google.android.material:material:1.9.0")
+
 }
