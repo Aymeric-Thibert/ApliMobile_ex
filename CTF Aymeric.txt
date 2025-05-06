@@ -1,9 +1,9 @@
 prob controlle acces
 
-1 connecter vous a l'adresse du serveur http://Adresse:8080
 
 
-2 Envoyer une requête Post signup d'on le raw body en JSON contient un compte avec le Nom de votre choisi et le mot de passe de 
+
+1 Envoyer une requête Post signup d'on le raw body en JSON contient un compte avec le Nom de votre choisi et le mot de passe de 
 votre choix http://Adresse:8080/api/id/signup pour crée un compte
 
 {
@@ -12,7 +12,7 @@ votre choix http://Adresse:8080/api/id/signup pour crée un compte
 }
 
 
-3 Envoyer une requête Post add pour crée une tache assurez vous que
+2 Envoyer une requête Post add pour crée une tache assurez vous que
 le raw body contient le nom de la tache. http://Adresse:8080/api/add
 
 {
@@ -21,10 +21,10 @@ le raw body contient le nom de la tache. http://Adresse:8080/api/add
 
 }
 
-4 Envoyer une requête Get pour voir la liste de tache du compte que vous avez créé cette
+3 Envoyer une requête Get pour voir la liste de tache du compte que vous avez créé cette
 requete n'a pas de body  http://Adresse:8080/api/home
 
-5 Dans le response body rechercher la tache que vous avez crée elle devrais ressembler a ceci
+4 Dans le response body rechercher la tache que vous avez crée elle devrais ressembler a ceci
 {
         "id": 5,
         "name": "Nom",
@@ -35,7 +35,7 @@ requete n'a pas de body  http://Adresse:8080/api/home
 	
 	Récupéré le idMAX de cette tache il représente la taille total de la liste
 
-6 Faite un boucle qui part de 1 jusqu'à l'idMAX récupéré qui
+5 Faite un boucle qui part de 1 jusqu'à l'idMAX récupéré qui
 envoi une requête GET sans body http://Adresse:8080/api/detail/{id} ou on ne fait que changer le id
  jusquà ce qu'on trouve la tache désiré. Pour trouver la tâche désiré, vérifier le name de la tache dans le response body. 
  {
@@ -54,11 +54,11 @@ envoi une requête GET sans body http://Adresse:8080/api/detail/{id} ou on ne fa
  
  
 
-7 Une fois la tache désiré trouvé. Garder en tête l'id qui a été mis dans la requête http://Adresse:8080/api/detail/{ID}
+6 Une fois la tache désiré trouvé. Garder en tête l'id qui a été mis dans la requête http://Adresse:8080/api/detail/{ID}
 Et Envoyer une requête GET sans body qui contient l'ID et 
 la valeur que le souhaite changer. http://Adresse:8080/api/progress/{ID}/{VALEUR}
 
 
-8 Envoyer une requête GET pour vérifier que la valeur a bien été modifier http://Adresse:8080/api/detail/{ID}
+7 Envoyer une requête GET pour vérifier que la valeur a bien été modifier http://Adresse:8080/api/detail/{ID}
 
 
